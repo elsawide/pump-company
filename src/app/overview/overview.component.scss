@@ -14,7 +14,7 @@ header {
   }
 }
 .pump-list {
-  overflow-y: scroll;
+  overflow-y: auto;
   max-height: calc(100vh - 32px - 25rem);
 }
 
