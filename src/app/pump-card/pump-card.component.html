@@ -1,0 +1,24 @@
+<div class="pump-card">
+  <div class="pump-properties">
+    <span>Ventilation pump number</span>
+    <p>{{ pump.id }}</p>
+  </div>
+  <div class="pump-properties">
+    <span>Area</span>
+    <p>{{ pump.area }}</p>
+  </div>
+  <div class="pump-properties">
+    <span>Status</span>
+    <p class="status" [ngClass]="{ disabled: pump.status === 'Disabled' }">
+      {{ pump.status }}
+    </p>
+  </div>
+  <div class="btn-container">
+    <button class="btn-solid" (click)="changeStatus(pump)">
+      {{ pump.status === "Active" ? "Deactivate" : "Activate" }}
+    </button>
+    <button class="btn-icon" (click)="deletePump(pump)">
+      <i class="fa-solid fa-trash-can fa-lg"></i>
+    </button>
+  </div>
+</div>

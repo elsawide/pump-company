@@ -1,1 +1,65 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@fortawesome/fontawesome-free/css/all.css";
+body{
+  background-color: #EAE9F3;
+  margin: 60px 0 32px;
+}
+
+
+
+input{
+  border: none;
+  outline: none;
+  border-radius: 1.25rem;
+  width: auto;
+  padding: 10px 16px;
+  font-size: 1rem;
+  font-weight:500;
+}
+
+button {
+  padding: 0.5rem 1.25rem;
+  border: none;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  font-weight:600;
+  min-width: 8.5rem;
+  background-color: transparent;
+  color: #4B45E7;
+  &:hover{
+    background-color: #4B45E7;
+    color: #fafafa;
+    cursor: pointer;
+  }
+}
+button.btn-solid{
+  background-color: #4B45E7;
+  color: #fafafa;
+  &:hover{
+    //opacity: 0.8;
+    background-color: #171390;
+  }
+  &:active{
+    background-color: #0E0C5A;
+  }
+}
+
+button.btn-lg{
+  font-size: 1.25rem;
+  font-weight:600;
+  padding: 0rem;
+  &:hover{
+    background-color: transparent;
+    color: #171390;;
+    cursor: pointer;
+  }
+  &:active{
+    color: #0E0C5A;
+  }
+}
+
+button.btn-icon{
+  min-width: auto;
+  padding:0.5rem;
+}
+

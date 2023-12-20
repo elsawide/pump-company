@@ -1,0 +1,18 @@
+<div class="custom-dropdown" (click)="toggleDropdown()">
+  <div class="selected-item" [ngClass]="{ open: isOpen }">
+    {{ selectedOption ? selectedOption : placeHolder }}
+    <i class="fa-solid fa-caret-down"></i>
+  </div>
+  <div class="dropdown-list" *ngIf="isOpen">
+    <div
+      class="dropdown-item"
+      *ngFor="let item of options"
+      (click)="onSelectOption(item)"
+    >
+      {{ item }}
+    </div>
+    <div class="dropdown-item" *ngIf="noOption" (click)="onSelectOption()">
+      {{ noOption }}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<header>
+  <h1>Ventilation pump overview</h1>
+  <button class="btn-lg" (click)="createNewPump()"><i class="fa-solid fa-plus"></i> Create new pump</button>
+</header>
+<div  class="filter-container">
+  <input id="pumpId" [(ngModel)]="filterOptions.id" (ngModelChange)="updateFilter($event, 'id')" placeholder="Search pump number" />
+  <app-drop-down class="wide" [options]="areas" [placeHolder]="'Area'" [noOption]="'No Filter'" (selectOption)="updateFilter($event,'area')"></app-drop-down>
+  <app-drop-down [options]="status" [placeHolder]="'Status'" [noOption]="'No Filter'" (selectOption)="updateFilter($event,'status')"></app-drop-down>
+</div>
+<div *ngIf="pumps$ | async as pumps" class="pump-list">
+  <app-pump-card *ngFor="let pump of pumps" [pump]="pump" (updatePumpData)="refreshPumpData($event)"></app-pump-card>
+</div>
+
+
+<app-new-pump-modal *ngIf="openModal" (modalAction)="onModalAction($event)"></app-new-pump-modal>

@@ -1,0 +1,12 @@
+<dialog id="modal">
+  <h3>Create new pump</h3>
+  <input id="pumpId" [(ngModel)]="newPump.id" placeholder="Search pump number" />
+  <input id="areaId" [(ngModel)]="newPump.area" placeholder="Area" />
+  <div *ngIf="warningMessage" class="warning">
+    {{ warningMessage }}
+  </div>
+  <div class="button-wrapper">
+    <button class="btn-solid" (click)="addPump()">Save</button>
+    <button (click)="onModalAction('Close')">Close</button>
+  </div>
+</dialog>

@@ -1,0 +1,61 @@
+.pump-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+
+  margin: 1rem 0;
+  border-radius: 1rem;
+  border: 1px solid #eee;
+  background-color: #fafafa;
+  .pump-properties {
+    font-weight: 600;
+    flex: 1;
+    span {
+      font-size: 0.75rem;
+      color: #6f6e6e;
+    }
+    p {
+      font-size: 1rem;
+      margin: 0 !important;
+      &.status{
+        color:#28a745;
+        &.disabled{
+          color:#d0021b;
+        }
+
+      }
+    }
+  }
+  button {
+    margin-right: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .pump-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  .filter-container {
+    flex-direction: column;
+    input {
+      width: clamp(15rem,20vw,17rem);
+    }
+  }
+  .btn-container{
+    display: flex;
+    width:100%;
+    justify-content: space-between;
+    margin-top:1rem;
+    .btn-solid{
+      flex: 1;
+    }
+    .btn-icon{
+      margin:0;
+    }
+  }
+}
+

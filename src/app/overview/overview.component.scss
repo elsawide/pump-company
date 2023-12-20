@@ -1,0 +1,33 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1rem auto;
+}
+.filter-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+  input {
+    flex: 1;
+  }
+}
+.pump-list {
+  overflow-y: scroll;
+  max-height: calc(100vh - 32px - 25rem);
+}
+
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+  }
+  .filter-container {
+    flex-direction: column;
+    input {
+      width: 17rem;
+    }
+  }
+}
