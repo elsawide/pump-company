@@ -31,7 +31,18 @@ export class InMemoryDataService implements InMemoryDbService {
         id: '2005',
         area: 'C',
         status: 'Active',
+      },
+      {
+        id: '2006',
+        area: 'C',
+        status: 'Active',
+      },
+      {
+        id: '2007',
+        area: 'C',
+        status: 'Disabled',
       }
+
     ];
     return { pumps };
   }
